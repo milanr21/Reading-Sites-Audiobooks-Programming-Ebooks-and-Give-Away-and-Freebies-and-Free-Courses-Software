@@ -1,30 +1,7 @@
- Reading Sites, Audiobooks, Programming, Cooking Ebooks and more (Awesome List) - Give-Away and Freebies - Freesoff.com - Free Courses, Software and Useful Methods                             {"@context":"http://schema.org","@type":"WebSite","url":"https://freesoff.com","potentialAction":{"@type":"SearchAction","target":"https://freesoff.com/search?q={search\_term\_string}","query-input":"required name=search\_term\_string"}}                                              {"@context":"http://schema.org","@type":"QAPage","name":"Reading Sites, Audiobooks, Programming, Cooking Ebooks and more (Awesome List)","mainEntity":{"@type":"Question","name":"Reading Sites, Audiobooks, Programming, Cooking Ebooks and more (Awesome List)","text":"<a name=\\"audiobook-sites-1\\" class=\\"anchor\\" href=\\"#audiobook-sites-1\\"><\\/a>► Audiobook Sites\\n\\n<a href=\\"https://cse.google.com/cse?cx=006516753008110874046:cwbbza56vhd\\" rel=\\"noopener nofollow ugc\\">Audiobook Sites Search<\\/a>\\n\\n<a href=\\"https://forum.mobilism.org/viewforum.php?f=124\\" rel=\\"noopener nofollow ugc\\">Mobilism Audiobooks<\\/a>\\n\\n<a href=\\"http://audiobookbay.ws/\\" rel=\\"noopener nofollow ugc\\">Audiobook Bay<\\/a> , <a href=\\"http://audiobookbay.nl/\\" rel=\\"noopener nofollow ugc\\">2<\\/a>, <a href=\\"http://www.audiobookbayabb.com/\\" rel=\\"noopener nofollow ugc\\">3<\\/a>, <a href=\\"http://www.theaudiobookbay.com/\\" rel=\\"noopener nofollow ugc\\">4<\\/a> - Torrents / <a href=\\"https://addons.mozilla.org/en-US/firefox/addon/audiobookbay-magnet-assistant/\\" rel=\\"noopener nofollow ugc\\">Extension<\\/a>\\n\\n<a href=\\"https://tokybook.com/\\" rel=\\"noopener nofollow ugc\\">Tokybook<\\/a> - Listen Online\\n\\n<a href=\\"https://mega.nz/folder/yvoQTKCL#cHzM6YY3JU3b65OzxecnmA\\" rel=\\"noopener nofollow ugc\\">Top 1,000 Audiobooks<\\/a> - Audiobooks / Drive\\n\\n<a href=\\"https://drive.google.com/drive/folders/1IsJTH4ElUg4fjngDNUlM1KPFmpfD\_tl9\\" rel=\\"noopener nofollow ugc\\">Audiobook Drive<\\/a> - Audiobooks / Drive\\n\\n<a href=\\"https://hotaudiobooks.com/\\" rel=\\"noopener nofollow ugc\\">HotAudiobooks<\\/a> - Listen Online\\n\\n<a href=\\"https://audiobookforsoul.net/\\" rel=\\"noopener nofollow ugc\\">Audiobooks For Soul<\\/a> - Listen Onlin&hellip;","upvoteCount":23,"answerCount":0,"dateCreated":"2021-07-20T03:01:56.688Z","author":{"@type":"Person","name":"Aayush Jha"}}}  
-
-html { overflow-y: hidden !important; } /\* user picked a theme where the "regular" scheme is dark \*/ /\* user picked a theme a light scheme and also enabled a dark scheme \*/ /\* deal with light scheme first \*/ @media (prefers-color-scheme: light) { html { background-color: #ffffff; } #d-splash .preloader-text-wrapper { color: #222222; } } /\* then deal with dark scheme \*/ @media (prefers-color-scheme: dark) { html { background-color: #ffffff; } #d-splash .preloader-text-wrapper { color: #222222; } } #d-splash { display: grid; place-items: center; backface-visibility: hidden; position: absolute; left: 0; top: 0; width: 100%; z-index: 1001; --animation-state: paused; } #d-splash .preloader-image { max-width: 100%; height: 100vh; } #d-splash .preloader-text-wrapper { position: absolute; opacity: 0; animation: fade-in 0.5s ease-in-out; animation-delay: 1s; animation-fill-mode: forwards; animation-play-state: var(--animation-state); margin-bottom: -4em; } #d-splash .preloader-text:after { animation: loading-text 3s infinite; content: ""; position: absolute; margin: 0 0.1em; left: 100%; } .rtl #d-splash .preloader-text:after { left: 0; right: 100%; } @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes loading-text { 0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75% { content: "..."; } } ![Freesoff.com - Free Courses, Software and Useful Methods](data:image/svg;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
-
-Loading
-
-html { overflow-y: revert !important; } #d-splash { display: none; }
-
-const DELAY\_TARGET = 2000; const POLLING\_INTERVAL = 50; const splashSvgTemplate = document.querySelector(".splash-svg-template"); const splashTemplateClone = splashSvgTemplate.content.cloneNode(true); const svgElement = splashTemplateClone.querySelector("svg"); const svgString = new XMLSerializer().serializeToString(svgElement); const encodedSvg = btoa(svgString); const splashWrapper = document.querySelector("#d-splash"); const splashImage = splashWrapper && splashWrapper.querySelector(".preloader-image"); if (splashImage) { splashImage.src = \`data:image/svg+xml;base64,${encodedSvg}\`; const connectStart = performance.timing.connectStart || 0; const splashDelay = connectStart ? DELAY\_TARGET : 0; const targetTime = connectStart + DELAY\_TARGET; let splashInterval; let discourseReady; const swapSplash = () => { splashWrapper && splashWrapper.style.setProperty("--animation-state", "running"); svgElement && svgElement.style.setProperty("--animation-state", "running"); const newSvgString = new XMLSerializer().serializeToString(svgElement); const newEncodedSvg = btoa(newSvgString); splashImage.src = \`data:image/svg+xml;base64,${newEncodedSvg}\`; performance.mark("discourse-splash-visible"); clearSplashInterval(); }; const clearSplashInterval = () => { clearInterval(splashInterval); splashInterval = null; }; (() => { splashInterval = setInterval(() => { if (discourseReady) { clearSplashInterval(); } if (Date.now() > targetTime) { swapSplash(); } }, POLLING\_INTERVAL); })(); document.addEventListener( "discourse-ready", () => { discourseReady = true; splashWrapper && splashWrapper.remove(); performance.mark("discourse-splash-removed"); }, { once: true } ); }
-
-                  
-
-[
-
-Freesoff.com - Free Courses, Software and Useful Methods
-========================================================
-
-](/)
-
 [Reading Sites, Audiobooks, Programming, Cooking Ebooks and more (Awesome List)](/t/reading-sites-audiobooks-programming-cooking-ebooks-and-more-awesome-list/48647)
 ====================================================================================================================================================================
 
-[Give-Away and Freebies](https://freesoff.com/c/give-away-and-freebies/6) 
 
-[website](https://freesoff.com/tag/website), [reading](https://freesoff.com/tag/reading)
-
-[Aayush\_Jha](https://freesoff.com/u/Aayush_Jha)  20 July 2021 03:01  #1
 
 [](#audiobook-sites-1)► Audiobook Sites
 =======================================
@@ -1505,86 +1482,3 @@ Freesoff.com - Free Courses, Software and Useful Methods
 *   [FiveFilters](https://www.fivefilters.org/) - _Multiple Article Accessibility Tools_
 
  
-
-  23 Likes
-
- 
-
-[Pishone\_David](https://freesoff.com/u/Pishone_David)  20 July 2021 04:18  #2
-
-Please give Credits next time. They’re working hard to provide us such things. It isn’t fair to just copy and take all the credits.
-
-  4 Likes
-
- 
-
-[Pishone\_David](https://freesoff.com/u/Pishone_David)  20 July 2021 04:21  #3
-
-Credit: FREEMEDIAHECKYEAH (FMHY Reddit)
-
-  5 Likes
-
- 
-
-[Aayush\_Jha](https://freesoff.com/u/Aayush_Jha)  22 July 2021 06:34  #4
-
-Hey newbie , this is a piracy website , welcome .  
-Here we give everything except credits .
-
-  1 Like
-
- 
-
-[Pishone\_David](https://freesoff.com/u/Pishone_David)  22 July 2021 07:55  #5
-
-No honor among thieves eh? Anyway, Thanks for the Introduction PRO.
-
- 
-
- 
-
-[marsonal](https://freesoff.com/u/marsonal)  22 July 2021 10:01  #6
-
-Not true and this is not a piracy website
-
-  1 Like
-
- 
-
-[Manga\_Nasa](https://freesoff.com/u/Manga_Nasa)  12 February 2022 10:49  #7
-
-Read free manga at [manganasa](https://manganasa.com/)
-
- 
-
- 
-
-[Pishone\_David](https://freesoff.com/u/Pishone_David)  13 February 2022 20:07  #8
-
-Seems like a good site. Will try to add it certain lists. ![:+1:](https://freesoff.com/images/emoji/twitter/+1.png?v=12 ":+1:")
-
- 
-
- 
-
-[Manga\_Nasa](https://freesoff.com/u/Manga_Nasa)  21 February 2022 07:54  #9
-
-Read free manga at [The Abandoned Empress](https://mangatoread.com/manga/the-abandoned-empress/)
-
- 
-
- 
-
-[system](https://freesoff.com/u/system) automatically bumped  27 July 2022 02:30  #10
-
- 
-
- 
-
-*   [Home](/)
-*   [Categories](/categories)
-*   [FAQ/Guidelines](/guidelines)
-*   [Terms of Service](/tos)
-*   [Privacy Policy](/privacy)
-
-Powered by [Discourse](https://www.discourse.org), best viewed with JavaScript enabled
